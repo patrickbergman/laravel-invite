@@ -1,0 +1,51 @@
+{
+    "name": "patrickbergman/laravel-invite",
+    "description": "A Laravel 5 package for sending and processing invites",
+    "keywords": [
+        "runline",
+        "invite",
+        "invitation",
+        "laravel-invite"
+    ],
+    "homepage": "https://github.com/patrickbergman/laravel-invite",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patrick Bergman",
+            "email": "patrick@runline.nl",
+            "homepage": "https://runline.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5 || ^7.0",
+        "orchestra/testbench" : "~3.5.0|~3.6.0",
+        "mockery/mockery": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PatrickBergman\\Invite\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PatrickBergman\\Invite\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PatrickBergman\\Invite\\InviteServiceProvider"
+            ]
+        }
+    }
+}
